@@ -1,1 +1,85 @@
+/* --- Reset i Tło --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #141414;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+/* Wygląd sekcji sterowania na komputerach (wyciągnięte z HTML) */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+select, button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* --- Karta Filmu --- */
+.movie-card {
+    background-color: #222;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#moviePoster {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Dodanie Loadera --- */
+.loader {
+    border: 6px solid #333333; 
+    border-top: 6px solid #0056b3; 
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+    margin: 30px auto; 
+    animation: spin 1s linear infinite; 
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Responsywność RWD na telefony --- */
+@media (max-width: 500px) {
+    .controls {
+        flex-direction: column; 
+    }
+
+    select, button {
+        width: 100%; 
+    }
+}

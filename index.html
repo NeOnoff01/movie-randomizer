@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Losowy Film</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Cześć, tu Randomizer</h1>
+    <div class="container">
+        <header>
+            <h1>🍿 Co dzisiaj oglądamy?</h1>
+            <p>Wybierz gatunek i zdaj się na ślepy los!</p>
+        </header>
+
+        <!-- Sekcja z przyciskami (controls) -->
+        <div class="controls">
+            <select>
+                <option>Dowolny gatunek</option>
+                <option>Komedia</option>
+                <option>Horror</option>
+                <option>Akcja</option>
+            </select>
+            <button>Wylosuj film</button>
+        </div>
+
+        <!-- Animacja ładowania -->
+        <div class="loader"></div>
+        
+        <!-- Karta wylosowanego filmu -->
+        <div class="movie-card">
+            <h2 id="movieTitle">Tytuł filmu</h2>
+            <img id="moviePoster" src="https://via.placeholder.com/300x450/444444/ffffff?text=Plakat+Filmu" alt="Plakat filmu">
+            <p id="movieDescription">Opis wylosowanego filmu pojawi się tutaj.</p>
+        </div>
+    </div>
 </body>
 </html>

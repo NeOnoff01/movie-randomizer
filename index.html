@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Losowy Film</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
 </head>
 <body>
     <div class="container">
@@ -14,26 +13,27 @@
             <p>Wybierz gatunek i zdaj się na ślepy los!</p>
         </header>
 
-        <!-- Sekcja z przyciskami (controls) -->
-        <div class="controls">
-            <select>
-                <option>Dowolny gatunek</option>
-                <option>Komedia</option>
-                <option>Horror</option>
-                <option>Akcja</option>
-            </select>
-            <button>Wylosuj film</button>
-        </div>
+        <main>
+            <div class="controls">
+                <select id="genreSelect">
+                    <option value="">Ładowanie gatunków...</option>
+                </select>
+                <button id="randomizeBtn">Wylosuj film</button>
+            </div>
 
-        <!-- Animacja ładowania -->
-        <div class="loader"></div>
-        
-        <!-- Karta wylosowanego filmu -->
-        <div class="movie-card">
-            <h2 id="movieTitle">Tytuł filmu</h2>
-            <img id="moviePoster" src="https://via.placeholder.com/300x450/444444/ffffff?text=Plakat+Filmu" alt="Plakat filmu">
-            <p id="movieDescription">Opis wylosowanego filmu pojawi się tutaj.</p>
-        </div>
+            <div id="loader" class="hidden">Losowanie...</div>
+
+            <div id="movieResult" class="movie-card hidden">
+                <img src="https://placehold.co/300x450/444444/ffffff?text=Plakat+Filmu" alt="Plakat filmu" id="moviePoster">
+                <div class="movie-info">
+                    <h2 id="movieTitle">Tytuł Filmu</h2>
+                    <p><strong>Ocena:</strong> <span id="movieRating">8.5</span>/10</p>
+                    <p id="movieDescription">Tutaj pojawi się krótki opis wylosowanego filmu...</p>
+                </div>
+            </div>
+        </main>
     </div>
+
+    <script src="app.js"></script>
 </body>
 </html>
